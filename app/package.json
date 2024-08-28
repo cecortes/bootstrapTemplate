@@ -1,0 +1,14 @@
+{
+  "name": "bootstraptemplate",
+  "version": "1.0.0",
+  "description": "A customize bootstrap to use in a web apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "César López",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
