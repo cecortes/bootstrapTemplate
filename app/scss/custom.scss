@@ -32,14 +32,96 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   --bs-body-font-family: "Montserrat", sans-serif;
 }
 
-.myBtn {
+/* --> Custom Buttons <-- */
+.btnPila {
   width: 130px;
   height: 40px;
   font-size: 1.1em;
   cursor: pointer;
-  background-color: #171717;
-  color: #fff;
+  background-color: var(--bs-cafe_cla);
+  color: var(--bs-azul);
   border: none;
   border-radius: 5px;
   transition: all 0.4s;
 }
+
+.btnPila:hover {
+  border-radius: 7px;
+  transform: translateX(-5px) translateY(-10px);
+  box-shadow: 0 7px 0 -2px var(--bs-fondo), 0 15px 0 -4px #4cf1c8,
+    0 16px 10px -3px #39db7c;
+}
+
+.btnPila:active {
+  border-radius: 7px;
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px var(--bs-fondo), 0 8px 0 -4px #4cf1c8,
+    0 12px 10px -3px #39db7c;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.btnNeon {
+  position: relative !important;
+  width: 140px;
+  height: 40px;
+  background-color: var(--bs-azul);
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btnNeon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 148px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(
+    -45deg,
+    var(--bs-cafe_cla) 0%,
+    var(--bs-cafe_obs) 100%
+  );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btnNeon::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    var(--bs-cafe_cla) 0%,
+    var(--bs-cafe_obs) 100%
+  );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.btnNeon:hover::after {
+  filter: blur(30px);
+}
+
+.btnNeon:hover::before {
+  transform: rotate(-180deg);
+}
+
+.btnNeon:active::before {
+  scale: 0.8;
+}
+/* --> -------------- <-- */
