@@ -124,4 +124,45 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 .btnNeon:active::before {
   scale: 0.8;
 }
+
+/* From Uiverse.io by lenfear23 */
+.btnSoft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(
+    to top,
+    #22333b 0%,
+    #2a3f49 80%,
+    #36515d 100%
+  );
+  border-radius: 30px;
+  border: 1px solid #36515d;
+  transition: all 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bs-cafe_cla);
+  text-shadow: 0 1px #22333b;
+}
+
+.btnSoft:hover {
+  box-shadow: 0 4px 3px 1px #395764, 0 6px 8px #314955, 0 -4px 4px #22333b,
+    0 -6px 4px #3d4b51, inset 0 0 3px 3px #22333b;
+}
+
+.btnSoft:active {
+  box-shadow: 0 4px 3px 1px #395764, 0 6px 8px #314955, 0 -4px 4px #22333b,
+    0 -6px 4px #3d4b51, inset 0 0 5px 3px #354c56, inset 0 0 30px #22333b;
+}
+
+.btnSoft:focus {
+  box-shadow: 0 4px 3px 1px #395764, 0 6px 8px #314955, 0 -4px 4px #22333b,
+    0 -6px 4px #3d4b51, inset 0 0 5px 3px #354c56, inset 0 0 30px #22333b;
+}
+
 /* --> -------------- <-- */
