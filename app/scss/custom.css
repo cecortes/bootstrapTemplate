@@ -12619,4 +12619,69 @@ textarea.form-control-lg {
   box-shadow: 0 4px 3px 1px #395764, 0 6px 8px #314955, 0 -4px 4px #22333b, 0 -6px 4px #3d4b51, inset 0 0 5px 3px #354c56, inset 0 0 30px #22333b;
 }
 
+/* From Uiverse.io by abrahamcalsin */
+.btnAnime {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--bs-azul);
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  color: var(--bs-fondo);
+}
+
+.btnAnime:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), var(--bs-cafe_cla));
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: #22333b;
+}
+
+.btnAnime:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.btnAnime span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #090909;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnAnime:hover span {
+  color: #11171c;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+    color: #22333b;
+  }
+}
 /* --> -------------- <-- *//*# sourceMappingURL=custom.css.map */
